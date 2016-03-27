@@ -1,1 +1,16 @@
 <script>
+var arrayOne = [1,2,3]; //creates array
+var arrayTwo = []; // creating an empty array
+var rotate = arrayOne.length - 2; //getting length of first var
+for (var i = rotate; i < arrayOne.length; i++){  //for loop, assigning var i to rotate
+	arrayTwo.push(arrayOne[i]);  //The .push adds new elements to the end of an array,returns the new length
+	
+}
+for (i = 0; i < rotate; i++){ //for loop adding to length of new array. "1" writes now too
+	arrayTwo.push(arrayOne[i]);
+}
+for (i = 0; i < arrayTwo.length; i++) { //for loop adds 5 to rotated array
+	arrayTwo[i] += 5;
+}
+document.write(arrayTwo); //writes the array directly to html doc
+</script>
