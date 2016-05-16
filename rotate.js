@@ -20,15 +20,15 @@ var Github = require('github-api');
 var detect = require('language-detect');
 
 var github = new Github({
- token: "7704965537ff60b3b8b55e781ed8d05350bd32dc",
+ token: "8013b4ee8623f34eccb3d5db570b5ba919c00594",
  auth: "oauth"
 });
 
 
-var repo = github.getRepo('nathangruber', 'js-challenges');
+var repo = github.getRepo('nathangruber', 'kodeKiwi');
 
 
-repo.read('master', 'github/js-challenges/rotate.html', function(err, data) {
+repo.read('master', 'github/kodeKiwi/rotate.js', function(err, data) {
    console.log(err);
    console.log(data);
 });
@@ -36,7 +36,7 @@ repo.getTree('master', function(err, tree) {
    console.log(err);
    console.log(tree);
 });
-detect('master' + 'js-challenges/rotate.html', function (err, language) {
+detect('master' + 'kodeKiwi/rotate.js', function (err, language) {
   console.log(err);      //=> null
   console.log(language); //=> "JavaScript"
 });
